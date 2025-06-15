@@ -51,6 +51,7 @@ export const Canvas: React.FC<CanvasProps> = ({
             key={el.id}
             style={[elementStyle, { backgroundColor: 'transparent' }]}
             {...panResponder.panHandlers}
+            onTouchStart={() => onElementSelect(el.id)}
             onTouchEnd={() => handleTap(el.id)}
           >
             <Text
@@ -75,6 +76,7 @@ export const Canvas: React.FC<CanvasProps> = ({
           key={el.id}
           style={elementStyle}
           {...panResponder.panHandlers}
+          onTouchStart={() => onElementSelect(el.id)}
           onTouchEnd={() => handleTap(el.id)}
           onTouchMove={event => {
             if (event.nativeEvent.touches.length === 2) {
@@ -97,7 +99,13 @@ export const Canvas: React.FC<CanvasProps> = ({
         </View>
       );
     },
-    [selectedId, handleTap, createPanResponder, onPinchGesture],
+    [
+      selectedId,
+      handleTap,
+      createPanResponder,
+      onPinchGesture,
+      onElementSelect,
+    ],
   );
 
   return <View style={styles.canvas}>{elements.map(renderElement)}</View>;

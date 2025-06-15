@@ -329,6 +329,7 @@ const CustomCanvaScreen: React.FC = () => {
     (el: CanvasElement) =>
       PanResponder.create({
         onStartShouldSetPanResponder: () => true,
+        onMoveShouldSetPanResponder: () => true,
         onPanResponderGrant: () => {
           setSelectedId(el.id);
           if (el.type === 'text' && el.text) {
@@ -348,6 +349,9 @@ const CustomCanvaScreen: React.FC = () => {
                 : element,
             ),
           );
+        },
+        onPanResponderRelease: () => {
+          // Optional: Add any cleanup or final position adjustments here
         },
       }),
     [],
