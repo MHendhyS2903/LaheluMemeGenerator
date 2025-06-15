@@ -1,5 +1,6 @@
 # LaheluMemeGenerator
-** ANDROID APK ** [Download APK]([https://drive.google.com/drive/folders/1RjRjg8CNjqkFPcJ1nQytHYfXYTPLI98I?usp=sharing](https://drive.google.com/file/d/1uP34XkwvtZGFjiJS40zE6cGVD62uhm0V/view?usp=sharing))
+** ANDROID APK ** 
+[Download APK](https://drive.google.com/file/d/1uP34XkwvtZGFjiJS40zE6cGVD62uhm0V/view?usp=drive_link)
 
 * Gesture Panning
 
